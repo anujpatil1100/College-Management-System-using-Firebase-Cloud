@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+  <div id="preloader"></div>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet"
+  href="https://fonts.googleapis.com/css?family=Acme">
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  </head>
+  <body>
+    <style>
+      #preloader{
+    background: rgb(248, 242, 242) url("Images/spinner.gif") no-repeat center center;
+    background-size: 10%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    }
+    </style>
+    <nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary ">
+        <div id="hp"class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img src="images/logo.png"width="90" height="50">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li style="margin-left: 20px;" class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li style="margin-left: 50px;" class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">About</a>
+              </li>
+              <li style="margin-left: 50px;" class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Contact</a>
+              </li>
+            <form class="d-flex" role="search">
+              <li class="nav-item">
+                <a id="regsp" class="nav-link">Login</a>
+              </li>
+                <li class="nav-item">
+                    <a id="regs" class="nav-link" href="student.html">Register</a>
+                  </li>
+            </form>
+          </div>
+      </nav>
+      <div class="container">
+      <p style="color: red; margin-left: 400px; margin-top: 100px;">Shri Shamrao Patil (Yadravkar) Educational & Charitable Trust's</p>
+<h3 style="color: red; margin-left: 300px;">Sharad Institute of Technology College of Engineering</h3>
+<h5 style="color: red; margin-left: 500px;" >An Autonomous Institute</h5>
+<h6 style="color: red;margin-left: 500px;">NBA Accredited Programmes</h6>
+<p style="color: red;margin-left: 200px;"> An A Grade Institute Accredited By NAAC, An ISO 9001:2015 Accredited Institute
+Recognized u/s 2(f) and 12(B) of the UGC Act 1956</p>
+<h1 style="color: rgb(46, 90, 249); margin-left: 500px; font-family: 'Times New Roman', Times, serif;">Mega Project</h1>
+<h1 style="color: rgb(46, 90, 249); margin-left: 250px; font-family: 'Times New Roman', Times, serif;">College Management System Using Blockchain</h1>
+      </div>
+    </div>
+    <div style="margin-top: 50px;border: solid black;" class="container">
+      <h1 style=" margin-left: 480px;margin-top: -10px; font-family: 'Times New Roman', Times, serif;padding: 100px;">SITCOE</h1>
+    </div>
+   
+    <div style="margin-left: -400px;margin-top: 80px;" class="input">
+      <div class="card" style="width: 25rem;" id="car">
+        <img id="im" src="Images/avt.png" class="card-img-top" alt="image">
+        <div class="card-body">
+          <div class="input-group mb-3">
+            <input id="em" type="text" class="form-control" placeholder="Username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+            <span class="input-group-text" ><i id="bo" class="fa fa-times" aria-hidden="true"></i></span>
+          </div>
+          <div class="input-group mb-3">
+            <input type="password" class="form-control" id="pass" placeholder="Password" aria-label="Recipient's username" aria-describedby="basic-addon2">
+            <i class="input-group-text" id="vie"><i id="eye" class="fa fa-eye" aria-hidden="true"></i></i>
+          </div>
+          <ion-icon name="eye-outline"></ion-icon>
+          <div class="g-recaptcha" data-sitekey="6LcPkfAhAAAAAAGvsCcNGZ3UoYQY4qZk6heklXWf"></div>
+          <i id="forg">forget password?</i>
+          <a class="btn btn-primary" id="btn">Sign   in</a>
+        </div>
+      </div>
+    </div>
+    <div class="alert alert-danger" id="alets" role="alert" style="visibility:hidden;">
+      Fill all blanks text field—check it out!
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script>
+      addEventListener("scroll",()=>{
+        let hp=document.getElementById('hp');
+        if(window.pageYOffset>5)
+        {
+          hp.style.backgroundColor=" rgb(187, 185, 183)";
+        }
+        else{
+          hp.style.backgroundColor="white";
+        }
+      })
+      let vie =document.getElementById('vie');
+     vie.addEventListener("click",()=>{
+      let pass =document.getElementById('pass');
+      let eye =document.getElementById('eye');
+      if(pass.type=="password"){
+        eye.className="fa fa-eye-slash";
+        pass.type="text";
+      }
+      else{
+        eye.className="fa fa-eye";
+        pass.type="password";
+      }
+     });
+     let regsp=document.getElementById('regsp');
+     regsp.addEventListener("click",()=>{
+      window.scrollBy(0,800);
+     })
+     let bo =document.getElementById('bo');
+     bo.addEventListener("click",()=>{
+      let em =document.getElementById('em').value="";
+     });
+    </script>
+
+    <script type="module">
+       import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
+      import {  getDatabase,ref,set,get,child, } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
+      import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-auth.js";
+      const firebaseConfig = {
+    apiKey: "AIzaSyB3uFbJncSa-zf3LsjbEO6bmFl-WQxGKUA",
+    authDomain: "sit-college.firebaseapp.com",
+    databaseURL: "https://sit-college-default-rtdb.firebaseio.com",
+    projectId: "sit-college",
+    storageBucket: "sit-college.appspot.com",
+    messagingSenderId: "60562617136",
+    appId: "1:60562617136:web:e7ecb6c6ce9009c7bd0ef5",
+    measurementId: "G-5Q8599Z1KW"
+  };
+  const app = initializeApp(firebaseConfig);
+    let btn=document.getElementById('btn');
+     btn.addEventListener("click",()=>{
+      let pass =document.getElementById('pass').value;
+      let em =document.getElementById('em').value;
+      let alets=document.getElementById('alets');
+      let loader=document.getElementById('preloader');
+      if(pass==""||em=="")
+      {
+        setTimeout(() => {
+            alets.style.visibility="visible";
+          }, 1000);
+
+          setTimeout(() => {
+            alets.style.visibility="hidden";
+          }, 8000);
+      }
+      var response=grecaptcha.getResponse();
+      if(response.length==0)
+      {
+        alets.innerText="Fill the Recaptcha";
+        setTimeout(() => {
+            alets.style.visibility="visible";
+          }, 1000);
+
+          setTimeout(() => {
+            alets.style.visibility="hidden";
+          }, 8000);
+      }
+      if(em.length==10){
+      const db = getDatabase(app);
+      var dbRef=ref(db); 
+      get(child(dbRef,`Students/${em}`)).then((snapshot) => {
+  if (snapshot.exists()) {
+    let a=snapshot.val().Email;
+     const auth = getAuth(app);
+     signInWithEmailAndPassword(auth, a, pass)
+  .then((userCredential) => {
+    // Signed in 
+    const user = userCredential.user;
+    localStorage.setItem("em",em);
+    window.location.replace('Dashboard.html')
+    // ...
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    alert(errorMessage);
+  });
+  }
+}).catch((error) => {
+  console.log(error);
+});
+  }
+  else{
+    // alets.innerText="Wrong Username & Password";
+    //     setTimeout(() => {
+    //         alets.style.visibility="visible";
+    //       }, 1000);
+
+    //       setTimeout(() => {
+    //         alets.style.visibility="hidden";
+    //       }, 8000);
+    const auth=getAuth(app);
+      signInWithEmailAndPassword(auth, em, pass)
+  .then((userCredential) => {
+    // Signed in 
+    const user = userCredential.user;
+    let m="";
+      for(let i=0;i<em.length;i++)
+      {
+        if(em[i]=='.'||em[i]=='@')
+        {
+          break;
+        }
+        m+=em[i];
+      }
+    localStorage.setItem("ms",m);
+
+    window.location.replace('http://127.0.0.1:5500/Dashboard1.html');
+  })
+  .catch((error) => {
+    const errorCode = error.code;
+    const errorMessage = error.message;
+    alert(errorMessage);
+  });
+  }
+  loader.style.display="initial";
+      setTimeout(() => {
+        loader.style.display="none";
+      }, 3000);
+    });
+    let forg=document.getElementById('forg');
+    forg.addEventListener("click",()=>{
+      location.assign('ForgetPassword.html');
+    });
+    </script>
+     <script>
+      let loader=document.getElementById('preloader');
+      window.addEventListener("load",()=>{
+        loader.style.display="none";
+      });
+    </script>
+  </body>
+</html>

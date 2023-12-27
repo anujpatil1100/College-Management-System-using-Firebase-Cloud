@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notice</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+    <nav class="navbar" style="background-color: rgba(0, 0, 0, 0.25);">
+        <a class="navbar" href="#">
+          <img src="Images/logo.png" width="80px" height="60.88px" left="41px" top="10px" position="absolute" alt="">
+        </a>
+        <li class="nav-item">
+          <a style="margin-left: -1300px;color: black;font-weight: bold;font-size: 35px;letter-spacing: 5px;margin-top: -15px;font-family: Verdana, Geneva, Tahoma, sans-serif;" class="nav-link active" aria-current="page">College Management System Using Blockchain</a>
+        </li>
+    </nav>
+    <h1>Notice</h1>
+    <div class="content">
+        <form id="notice-form">
+            Select Date:<input type="date" id="user-date" name="user-date">
+            <label for="notice-title">Notice Title:</label>
+            <input type="text" id="notice-title" required>
+            <label for="notice-content">Notice Content:</label>
+            <textarea id="notice-content" rows="5" required></textarea>
+            <label for="name-faculty">Enter Faculty Name:</label>
+            <input type="text" id="name-faculty" required>
+            <label for="designation-faculty">Enter Faculty designation:</label>
+            <input type="text" id="designation-faculty" required>
+            <label for="name-faculty2">Enter Faculty Name 2:</label>
+            <input type="text" id="name-faculty2">
+            <label for="designation-faculty2">Enter Faculty 2 designation:</label>
+            <input type="text" id="designation-faculty2">
+            <label for="designation-faculty2">Department:</label>
+            <select name="branch" id="branch" required>
+                <option value="cse">Computer Science & Engineering</option>
+                <option value="aids">Artificial Intelligence & Data Science</option>
+                <option value="ar">Automation & Robotics</option>
+                <option value="etc">Electronics And Computer Engineering</option>
+                <option value="me">Mechnical Engineering</option>
+                <option value="ce">Civil Engineering</option>
+                <option value="ee">Electrical Engineering</option>
+                <option value="Mechatronics">Mechatronics Engineering</option>
+                <option value="bsh">Basic Sciences and Humanities</option>
+                <option value="ece">Electronics & Computer Engineering</option>
+                <option value="es">Exam Section</option>
+                <option value="tp">Trainning & Placement</option>
+                <option value="sitcoe">All</option>
+              </select><br>
+           <br> <button type="button" id="generate-button">Generate and Download PDF</button>
+        </form>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

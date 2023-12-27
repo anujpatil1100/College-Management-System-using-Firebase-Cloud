@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <div id="preloader"></div>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <title>Result</title>
+    <style>
+        .A{
+            font-size: 20px;
+            font-style:normal
+        }
+    </style>
+    <nav class="navbar" style="background-color: rgba(0, 0, 0, 0.25);">
+        <a class="navbar" href="#">
+          <img src="Images/logo.png" width="80px" height="60.88px" left="41px" top="10px" position="absolute" alt="">
+        </a>
+        <li class="nav-item">
+          <a style="margin-left: -1300px;color: black;font-weight: bold;font-size: 35px;letter-spacing: 5px;margin-top: -15px;font-family: Verdana, Geneva, Tahoma, sans-serif;" class="nav-link active" aria-current="page">College Management System Using Blockchain</a>
+        </li>
+    </nav>
+  </head>
+  <body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+        #preloader{
+      background: rgb(248, 242, 242) url("Images/spinner.gif") no-repeat center center;
+      background-size: 10%;
+      height: 100vh;
+      width: 100%;
+      position: fixed;
+      z-index: 100;
+      }
+      </style>
+     <center>
+    <div>
+        <div class="alert alert-danger" id="alets" role="alert" style="visibility:hidden;margin-top: 1%;">
+            Fill all the text field
+          </div>
+    <div class="card" style="width: 1130px;height: 450px;margin-top:20px;border: solid 1px;box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);" id="personal">
+        <label  for="fname"style="width: 800px;margin-left: 12%;margin-top:8%;font-size:30px">SEMESTER</label><br>
+        <select name="SEM" id="fname" style="width: 700px;height: 34px;margin-left:18%;justify-content: center;" required>
+            <option value="SEM1">SEMESTER 1</option>
+            <option value="SEM2">SEMESTER 2</option>
+            <option value="SEM3">SEMESTER 3</option>
+            <option value="SEM4">SEMESTER 4</option>
+            <option value="SEM5">SEMESTER 5</option>
+            <option value="SEM6">SEMESTER 6</option>
+            <option value="SEM7">SEMESTER 7</option>
+            <option value="SEM8">SEMESTER 8</option>
+          </select>
+          <label for="branch"style="width: 800px;margin-left: 12%;margin-top:4%;font-size:30px">Exam</label>
+          <select name="semt" id="semt" style="width: 700px;height: 34px;margin-left:18%" required>
+              <option value="End-Semster">End-Semster</option>
+              <option value="Re-exam">Re-exam</option>
+              <option value="Re-medial">Re-medial</option>
+            </select>
+            <a class="btn btn-primary" style="width: 230px; border: none;
+      border-radius: 10px; margin-top: 6%;margin-left:40%;" id="btns">Proceed</a>
+    </div>
+           <script>
+            let btns=document.getElementById('btns');
+            btns.addEventListener("click",()=>{
+                let fname=document.getElementById('fname').value;
+                let semt=document.getElementById('semt').value;
+                localStorage.setItem("semst",fname);
+                localStorage.setItem("semts",semt);
+                loader.style.display="initial";
+      setTimeout(() => {
+        loader.style.display="none";
+      }, 3000);
+      location.assign("http://127.0.0.1:5500/markshow1.html");
+            });
+           </script>
+           
+             <script>
+                let loader=document.getElementById('preloader');
+                window.addEventListener("load",()=>{
+                  loader.style.display="none";
+                });
+              </script>
+  </body>
+</html>

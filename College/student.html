@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <div id="preloader"></div>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <title>Create account for Student</title>
+    <style>
+        .A{
+            font-size: 20px;
+            font-style:normal
+        }
+    </style>
+    <nav class="navbar" style="background-color: rgba(0, 0, 0, 0.25);">
+        <a class="navbar" href="#">
+          <img src="Images/logo.png" width="80px" height="60.88px" left="41px" top="10px" position="absolute" alt="">
+        </a>
+        <li class="nav-item">
+          <a style="margin-left: -1300px;color: black;font-weight: bold;font-size: 35px;letter-spacing: 5px;margin-top: -15px;font-family: Verdana, Geneva, Tahoma, sans-serif;" class="nav-link active" aria-current="page">College Management System Using Blockchain</a>
+        </li>
+    </nav>
+  </head>
+  <body>
+     <center>
+    <div style="margin-top: 20px;"><input type="radio" checked id="Student" name="account_type" value="HTML">
+      <label for="html" style="font-size: 20px;">Student</label>
+      <input type="radio" style="margin-left: 10px;" id="css" name="account_type" value="CSS">
+      <label for="css" style="font-size: 20px;">Educator</label>
+    </div>
+    <div>
+    <div class="card" style="width: 1130px;height: 630px;margin-top:50px;border: solid 1px;box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);" id="personal">
+       
+        <h2 style="margin-left: -75%;">Personal Details</h2>
+        <label  for="fname"style="width: 100px;margin-left: 1.5%;">First name:</label>
+        <input  type="text"style="width: 252px;height: 34px;margin-left:2.5%" id="fname" name="fname" required>
+        <label for="lname"style="width: 108px;margin-left:40%;margin-top:-58px">Middle name:</label>
+        <input  type="text" style="width: 252px;height: 34px;margin-left:40%" id="mname" name="mname" required>
+        <label for="lname"style="width: 100px;margin-left:74%;margin-top:-58px">Last name:</label>
+        <input type="text" style="width: 252px;height: 34px;margin-left:75%" id="lname" name="lname" required>
+        <label for="fname"style="width: 100px;margin-left: 1%;margin-top:33px;">Email ID:</label>
+        <input  type="email"style="width: 252px;height: 34px;margin-left:2.5%" id="email" name="fname" required>
+        <label for="lname"style="width: 90px;margin-left:39.5%;margin-top:-58px">Phone No:</label>
+        <input type="number" style="width: 252px;height: 34px;margin-left:40%" id="phone" name="mname" required>
+        <label for="lname"style="width: 100px;margin-left:75%;margin-top:-58px">Date of Birth:</label>
+        <input type="date" style="width: 252px;height: 34px;margin-left:75%" id="dob" name="lname" required>
+        <label for="fname"style="width: 120px;margin-left: 2.2%;margin-top:33px;">Parent Email ID:</label>
+        <input  type="email"style="width: 252px;height: 34px;margin-left:2.5%" id="pemail" name="fname" required>
+        <label for="lname"style="width: 130px;margin-left:39.5%;margin-top:-58px">Parent Phone No:</label>
+        <input type="number" style="width: 252px;height: 34px;margin-left:40%" id="pphone" name="mname" required>
+        <label for="fname"style="width: 120px;margin-left:50%;margin-top:33px">Upload Photo :</label>
+        <img id="avte" src="Images/avt.png" style="width: 80px;height: 80px;margin-left:50%"alt="image">
+        <input id="files" style="margin-left: 58%;margin-top: -50px;" oninput="lq()" accept="image/*" id="formFile" type="file">
+        <label for="fname"style="width: 120px;margin-left: 0%;margin-top:-50px;">Gender</label>
+        <select name="branch" id="gender" style="width: 252px;height: 34px;margin-left:2.5%" required>
+          <option value="0">Select</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+        <label for="fname" class="A" style="width: 100px;margin-left: 1%;margin-top: 3%;">Address</label>
+        <label for="fname"style="width: 110px;margin-left: 2.5%;margin-top:33px;">Address line 1 :</label>
+        <input  type="text"style="width: 35%;height: 34px;margin-left:2.5%" id="ad1" name="fname" required>
+        <label for="lname"style="width: 110px;margin-left:39.9%;margin-top:-58px;">Address line 2 :</label>
+        <input type="text" style="width: 35%;height: 34px;margin-left:40%" id="ad2" name="mname" required>
+        <label for="fname"style="width: 100px;margin-left: 1%;margin-top:33px;">Pin Code:</label>
+        <input  type="number"style="width: 252px;height: 34px;margin-left:2.5%" id="pin" name="fname" required>
+        <label for="lname"style="width: 90px;margin-left:39.5%;margin-top:-58px">District:</label>
+        <input type="text" style="width: 252px;height: 34px;margin-left:40%" id="dis" name="mname" required>
+        <label for="lname"style="width: 100px;margin-left:75%;margin-top:-58px">State:</label>
+        <input type="text" style="width: 252px;height: 34px;margin-left:75%" id="state" name="lname" required>
+      </div>
+      <div class="card" style="width: 1130px;height: 250px;margin-top:50px;border: solid 1px;box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);" id="personal">
+        <h2 style="margin-left: -63%;margin-top: 3%">Student College Details</h2>
+        <label for="branch"style="width: 100px;margin-left: 0.8%;">Branch:</label>
+        <select name="branch" id="branch" style="width: 252px;height: 34px;margin-left:2.5%" required>
+            <option value="cse">Computer Science & Engineering</option>
+            <option value="aids">Artificial Intelligence & Data Science</option>
+            <option value="ar">Automation & Robotics</option>
+            <option value="etc">Electronics And Telecommunication Engineering</option>
+            <option value="me">Mechnical Engineering</option>
+            <option value="ce">Civil Engineering</option>
+            <option value="ee">Electrical Engineering</option>
+            <option value="Mechatronics">Mechatronics Engineering</option>
+            <option value="bsh">Basic Sciences and Humanities</option>
+            <option value="ece">Electronics & Computer Engineering</option>
+          </select>
+        <label for="year"style="width: 108px;margin-left:37%;margin-top:-58px">Year:</label>
+        <select name="year" id="year" style="width: 252px;height: 34px;margin-left:40%" required>
+            <option value="first">First Year</option>
+            <option value="second">Second Year</option>
+            <option value="third">Third Year</option>
+            <option value="last">Last Year</option>
+          </select>
+        <label for="div"style="width: 100px;margin-left:73%;margin-top:-58px">Division:</label>
+        <select name="div" id="div" style="width: 252px;height: 34px;margin-left:75%" required>
+            <option value="a">A</option>
+            <option value="b">B</option>
+            <option value="none">None</option>
+          </select>
+        <label for="roll"style="width: 100px;margin-left: 0.8%;margin-top:33px;">Roll No :</label>
+        <input  type="number"style="width: 252px;height: 34px;margin-left:2.5%" id="rno" name="" required>
+        <label for="prn"style="width: 90px;margin-left:38.5%;margin-top:-58px">PRN No:</label>
+        <input type="number" style="width: 252px;height: 34px;margin-left:40%" id="prn" name="" required>
+        <label for="lname"style="width: 130px;margin-left:71.5%;margin-top:-58px">Batch</label>
+        <select name="branch" id="batch" style="width: 252px;height: 34px;margin-left:75%" required>
+          <option value="0">Select</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+      </div>
+      <div>
+        <div class="card" style="width: 1130px;height: 200px;margin-top:50px;border: solid 1px;box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);" id="personal">
+        <h2 style="margin-left: -75%;margin-top: 3%">Other Details</h2>
+        <label for="fname"style="width: 110px;margin-left: 2%;margin-top:33px;">Linkdin profile:</label>
+        <input  type="text"style="width: 252px;height: 34px;margin-left:2%" id="linkedin" name="fname">
+        <label for="lname"style="width: 110px;margin-left:39.5%;margin-top:-58px;">Github profile:</label>
+        <input type="text" style="width: 252px;height: 34px;margin-left:40%;" id="git" name="mname">
+        <label for="lname"style="width: 130px;margin-left:75%;margin-top:-58px;">Upload Resume:</label>
+        <input type="file" style="width: 252px;height: 34px;margin-left:75%" oninput="pq()" accept=".doc,.docx,.pdf" id="res" name="lname">
+      </div>
+      </div>
+      <br>
+      <div class="g-recaptcha" data-sitekey="6LcPkfAhAAAAAAGvsCcNGZ3UoYQY4qZk6heklXWf"></div>
+      <a class="btn btn-primary" style="width: 230px; border: none;
+      border-radius: 10px; margin-top: 2%" id="btns">Create Account</a>
+    </center>
+    <div class="alert alert-danger" id="alets" role="alert" style="visibility:hidden;">
+      Fill all the text field
+    </div>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+      body{
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 140%;
+        height: 1000px;        
+      }
+      #preloader{
+    background: rgb(248, 242, 242) url("Images/spinner.gif") no-repeat center center;
+    background-size: 10%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    }
+    </style>
+    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+    <script>
+       function lq() {
+            // get user's uploaded image
+  let avte=document.getElementById('avte').value;
+const imgPath = document.getElementById('files').files[0];
+const reader = new FileReader();
+let loader=document.getElementById('preloader');
+reader.addEventListener("load", function () {
+    // convert image file to base64 string and save to localStorage
+  localStorage.setItem("image", reader.result);
+  const op=localStorage.getItem("image");
+  if(op){
+    document.querySelector('#avte').setAttribute("src",op);
+  }
+  
+
+}, false);
+
+if (imgPath) {
+    reader.readAsDataURL(imgPath);
+}
+     } 
+     
+     
+     function pq() {
+            // get user's uploaded image
+const imgPath = document.getElementById('res').files[0];
+const reader = new FileReader();
+let loader=document.getElementById('preloader');
+reader.addEventListener("load", function () {
+    // convert image file to base64 string and save to localStorage
+  localStorage.setItem("respts", reader.result);
+
+}, false);
+
+if (imgPath) {
+    reader.readAsDataURL(imgPath);
+}
+     }
+    </script>
+    <script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
+  import {  getDatabase,ref, set } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
+  import { getAuth, createUserWithEmailAndPassword,sendPasswordResetEmail } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-auth.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyB3uFbJncSa-zf3LsjbEO6bmFl-WQxGKUA",
+    authDomain: "sit-college.firebaseapp.com",
+    databaseURL: "https://sit-college-default-rtdb.firebaseio.com",
+    projectId: "sit-college",
+    storageBucket: "sit-college.appspot.com",
+    messagingSenderId: "60562617136",
+    appId: "1:60562617136:web:e7ecb6c6ce9009c7bd0ef5",
+    measurementId: "G-5Q8599Z1KW"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const database = getDatabase(app);
+    let btns=document.getElementById('btns');
+    btns.addEventListener("click",()=>{
+      let alets=document.getElementById('alets');
+      let fname=document.getElementById('fname').value;
+      let mname=document.getElementById('mname').value;
+      let lname=document.getElementById('lname').value;
+      let email=document.getElementById('email').value;
+      let phone=document.getElementById('phone').value;
+      let dob=document.getElementById('dob').value;
+      let pemail=document.getElementById('pemail').value;
+      let pphone=document.getElementById('pphone').value;
+      let ad1=document.getElementById('ad1').value;
+      let ad2=document.getElementById('ad2').value;
+      let pin=document.getElementById('pin').value;
+      let dis=document.getElementById('dis').value;
+      let state=document.getElementById('state').value;
+      let branch=document.getElementById('branch').value;
+      let year=document.getElementById('year').value;
+      let div=document.getElementById('div').value;
+      let rno=document.getElementById('rno').value;
+      let prn=document.getElementById('prn').value;
+      let linkedin=document.getElementById('linkedin').value;
+      let git=document.getElementById('git').value;
+      let gender=document.getElementById('gender').value;
+      let batch=document.getElementById('batch').value;
+      var response=grecaptcha.getResponse();
+      if(fname==""||mname==""||lname==""||email==""||phone==""||dob==""||pemail==""||pphone==""||ad1==""||ad2==""||pin==""||dis==""||
+      state==""||branch==""||year==""||div==""||rno==""||prn==""||linkedin==""||git=="")
+      {
+        setTimeout(() => {
+            alets.style.visibility="visible";
+          }, 1000);
+
+          setTimeout(() => {
+            alets.style.visibility="hidden";
+          }, 8000);
+      }
+      else if(phone.length!=10||pphone.length!=10)
+      {
+        alets.innerText="Enter right phone number";
+        setTimeout(() => {
+            alets.style.visibility="visible";
+          }, 1000);
+
+          setTimeout(() => {
+            alets.style.visibility="hidden";
+          }, 8000);
+      }
+      else if(!linkedin.match("https://www.linkedin.com/in/"))
+      {
+        alets.innerText="Enter right linkedin URL...";
+        setTimeout(() => {
+            alets.style.visibility="visible";
+          }, 1000);
+
+          setTimeout(() => {
+            alets.style.visibility="hidden";
+          }, 8000);
+      }
+      else if(prn.length!=10)
+      {
+        alets.innerText="Enter right PRN number";
+        setTimeout(() => {
+            alets.style.visibility="visible";
+          }, 1000);
+
+          setTimeout(() => {
+            alets.style.visibility="hidden";
+          }, 8000);
+      }
+      else if(gender=="0")
+          {
+            alets.innerText="Select the Gender";
+        setTimeout(() => {
+            alets.style.visibility="visible";
+          }, 1000);
+          setTimeout(() => {
+            alets.style.visibility="hidden";
+          }, 8000);
+        }
+        else if(batch=="0")
+          {
+            alets.innerText="Select the Batch";
+        setTimeout(() => {
+            alets.style.visibility="visible";
+          }, 1000);
+          setTimeout(() => {
+            alets.style.visibility="hidden";
+          }, 8000);
+        }
+      else if(!email.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/))
+     {
+      alets.innerText="Enter the valid email";
+        setTimeout(() => {
+            alets.style.visibility="visible";
+          }, 1000);
+
+          setTimeout(() => {
+            alets.style.visibility="hidden";
+          }, 8000);
+     }
+      else if(response.length==0){
+          alets.innerText="Fill the Recaptcha";
+        setTimeout(() => {
+            alets.style.visibility="visible";
+          }, 1000);
+
+          setTimeout(() => {
+            alets.style.visibility="hidden";
+          }, 8000);
+        }
+      
+     else{
+      let zx1=fname.toUpperCase();
+      let zx2=mname.toUpperCase();
+      let zx3=lname.toUpperCase();
+      localStorage.setItem("zx1",zx1);
+      localStorage.setItem("zx2",zx2);
+      localStorage.setItem("zx3",zx3);
+      localStorage.setItem("emails",email);
+      localStorage.setItem("phone",phone);
+      localStorage.setItem("`dob",dob);
+      localStorage.setItem("ad1",ad1);
+      localStorage.setItem("ad2",ad2);
+      localStorage.setItem("pin",pin);
+      localStorage.setItem("dis",dis);
+      localStorage.setItem("state",state);
+      localStorage.setItem("branch",branch);
+      localStorage.setItem("linkedin",linkedin);
+      localStorage.setItem("git",git);
+      localStorage.setItem("pemail",pemail);
+      localStorage.setItem("pphone",pphone);
+      localStorage.setItem("year",year);
+      localStorage.setItem("div",div);
+      localStorage.setItem("rno",rno);
+      localStorage.setItem("prn",prn);
+      localStorage.setItem("gen",gender);
+      localStorage.setItem("batch",batch);
+      check();
+     }
+    });
+    let css=document.getElementById('css');
+        css.addEventListener("click",()=>{
+          window.location.replace('Eduator.html');
+        })
+        let Student=document.getElementById('Student');
+        Student.addEventListener("click",()=>{
+          window.location.replace('student.html');
+        })
+        function check()
+        {
+          let alets=document.getElementById('alets');
+          let pass=1234567;
+          const auth = getAuth(app);
+          createUserWithEmailAndPassword(auth, localStorage.getItem("emails"), pass)
+      .then((userCredential) => {
+        // Signed in 
+        const user = userCredential.user;
+        set(ref(database, 'Students/' + localStorage.getItem("prn")), {
+             First_name:localStorage.getItem("zx1"),
+             Middle_name:localStorage.getItem("zx2"),
+             Last_name:localStorage.getItem("zx3"),
+             Profile_img:localStorage.getItem("image"),
+             Email:localStorage.getItem("emails"),
+             Phone:localStorage.getItem("phone"),
+             DOB:localStorage.getItem("`dob"),
+             Address1:localStorage.getItem("ad1"),
+             Address2:localStorage.getItem("ad2"),
+             PIN:localStorage.getItem("pin"),
+             District:localStorage.getItem("dis"),
+             State:localStorage.getItem("state"),
+             Year:localStorage.getItem("year"),
+             Division:localStorage.getItem("div"),
+             RollNo:localStorage.getItem("rno"),
+             PRN:localStorage.getItem("prn"),
+             Branch:localStorage.getItem("branch"),
+             Linkedin:localStorage.getItem("linkedin"),
+             Github:localStorage.getItem("git"),
+             Resume:localStorage.getItem("respts"),
+             Parent_email:localStorage.getItem("pemail"),
+             Parent_phone:localStorage.getItem("pphone"),
+             Gender:localStorage.getItem("gen"),
+             Batch:localStorage.getItem("batch")
+          });
+              setTimeout(() => {
+                alets.style.visibility="visible";
+              }, 1000);
+    
+              setTimeout(() => {
+                alets.style.visibility="hidden";
+              }, 8000);
+          loader.style.display="initial";
+          setTimeout(() => {
+            window.location.replace("AccountSuccessful.html"); 
+           }, 7000); 
+        // ...
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        alets.innerText="Email Already registered...";
+        setTimeout(() => {
+            alets.style.visibility="visible";
+          }, 1000);
+
+          setTimeout(() => {
+            alets.style.visibility="hidden";
+          }, 8000);
+        // ..
+      });
+    }
+    
+    </script>
+     <script>
+      let loader=document.getElementById('preloader');
+      window.addEventListener("load",()=>{
+        loader.style.display="none";
+      });
+    </script>
+  </body>
+</html>

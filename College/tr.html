@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="card" style="width: 1450px; height: 130px;margin-top:10px;border: solid 1px;box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
+        <h2 style="margin-top: 30px;padding-right: 1180px">Live Lecture :</h2>
+        <h4 id="sub" style="margin-right: 45%; margin-top: -4%;">Subject :Data Warehouse</h4>
+        <h4 id="tec" style="margin-right: 41%;margin-top: 2%">Teacher Name :A. P. Chougule</h4>
+        <h4 id="croom" style=" margin-top: -7%;margin-left: 30%;">Classroom No.:60</h4>
+        <h4 id="lt" style=" margin-top: 2%;margin-left: 35%;">Lecture Time : 2.20 - 3.20</h4>  
+        </div>
+    <script type="module">
+         import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
+      import {  getDatabase,ref,set,get,child, } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
+      import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-auth.js";
+      const firebaseConfig = {
+    apiKey: "AIzaSyB3uFbJncSa-zf3LsjbEO6bmFl-WQxGKUA",
+    authDomain: "sit-college.firebaseapp.com",
+    databaseURL: "https://sit-college-default-rtdb.firebaseio.com",
+    projectId: "sit-college",
+    storageBucket: "sit-college.appspot.com",
+    messagingSenderId: "60562617136",
+    appId: "1:60562617136:web:e7ecb6c6ce9009c7bd0ef5",
+    measurementId: "G-5Q8599Z1KW"
+  };
+  const app=initializeApp(firebaseConfig);
+      const db = getDatabase(app);
+      var dbRef=ref(db); 
+      const weekday = ["SUNDAY","MONDAY","TUESDAY","WEDNESDAY","THURSDAY","FRIDAY","SATURDAY"];
+setInterval(() => {
+const ds = new Date();
+let day = weekday[ds.getDay()];
+var hours = ds.getHours();
+var minutes = ds.getMinutes();
+var ampm = hours >= 12 ? 'pm' : 'am';
+hours = hours % 12;
+hours = hours ? hours : 12;
+let kt="12:10pm";
+let st=hours // the hour '0' should be '12'
+if(ds.getDay()!=0){
+    let sub=document.getElementById('sub');
+    let tec=document.getElementById('tec');
+    let croom=document.getElementById('croom');
+    let lt=document.getElementById('lt');
+    let vu="";
+    if(kt=="9:30am")
+    {
+        vu="930";
+        localStorage.setItem("mk",vu);
+    }
+    else if(kt=="10:30am")
+    {
+        vu="1030";
+        localStorage.setItem("mk",vu);
+    }
+    else if(kt=="12:10pm")
+    {
+        vu="1210";
+        localStorage.setItem("mk",vu);
+    }
+    else if(kt=="1:10pm")
+    {
+        vu="110";
+        localStorage.setItem("mk",vu);
+    }
+    else if(kt=="2:20pm")
+    {
+        vu="220";
+        localStorage.setItem("mk",vu);
+    }
+    else if(kt=="3:20pm")
+    {
+        vu="320";
+        localStorage.setItem("mk",vu);
+    }
+    get(child(dbRef,`Timetable/CSETYA/${day}/${localStorage.getItem("mk")}`)).then((snapshot) => {
+  if (snapshot.exists()) {
+        sub.innerText="Subject :"+snapshot.val().Subject;
+        tec.innerText="Teacher Name :"+snapshot.val().Teacher;
+        croom.innerText="Classroom No.:"+snapshot.val().Classroom;
+        lt.innerText="Lecture Time :"+snapshot.val().Time;
+       }
+      }).catch((error) => {
+  console.log(error);
+});
+    if(st>=9 && ampm!='pm' && minutes==30 && kt!="10:30am"){
+ 
+}
+    }
+}, 1000); 
+    </script>
+</body>
+</html>

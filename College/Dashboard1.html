@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <div id="preloader"></div>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Educator Dashboard</title>
+    <style>
+        .A{
+            font-size: 20px;
+            font-style:normal
+        }
+.button {
+  position: absolute;
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: white;
+  background-color: blue;
+  border: none;
+  border-radius: 10px;
+  left: 561px;
+top: 1260px;
+}
+#preloader{
+    background: rgb(248, 242, 242) url("Images/spinner.gif") no-repeat center center;
+    background-size: 10%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    }
+.button:hover {background-color: gray}
+
+.button:active {
+  background-color: gray;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+#vp:hover{
+  margin-left: 1300px;
+  color: blue;
+  cursor: pointer;
+  text-decoration: underline;
+}
+#lg:hover{
+  margin-left: 1300px;
+  color: rgb(255, 0, 0);
+  cursor: pointer;
+  text-decoration: underline;
+}
+    </style>
+    <nav class="navbar" style="background-color: rgba(0, 0, 0, 0.25);">
+        <a class="navbar" href="#">
+          <img src="Images/logo.png" width="80px" height="60.88px" left="41px" top="10px" position="absolute" alt="">
+        </a>
+    </nav>
+  </head>
+  <body><center>
+    <div class="card" style="width: 1450px; height: 346px;margin-top:50px;border: solid 1px;box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
+        <div style="padding-right: 1280px;margin-left: 10px;">
+            <h6 id="nm" style="margin-top: 10px;">Hello, Pranav Patil</h6>
+            <h7 id="dates">2.20PM, 23 April 2023</h7>
+        </div>
+        <div>
+            <img id="avte" src="Images/avt.png" style="height: 50px; width: 50px; border-radius: 5px;margin-left: 1300px; margin-top: -65px" alt="">
+            <!-- <h7 id="vp" style="margin-left: 1300px;">View Profille</h7> -->
+            <h7 id="lg" style="margin-left: 1300px;">Logout</h7>
+        </div>
+        <b><h1 style="margin-top:-5%;">Welcome Back!</h1></b><br>
+
+        <div>
+          <a class="btn btn-primary" style="width: 10%;height: 100%;margin-top: 1%;margin-left: 3%; border: none;border-radius: 10px;font-size: 160%;" href="http://127.0.0.1:5500/notice.html">Make Notice</a>
+          <a class="btn btn-success" style="width: 10%;height: 100%;margin-top: 1%;margin-left: 12%; border: none;border-radius: 10px;font-size: 160%;" href="http://127.0.0.1:5500/publishnotice.html">Publish Notice</a>
+          <a class="btn btn-secondary" style="width: 10%;height: 100%;margin-top: 1%;margin-left: 10%; border: none;border-radius: 10px;font-size: 160%;" href="http://127.0.0.1:5500/markproc.html">Make Result</a>        
+        </div>
+    </div>
+    <div class="card" style="width: 1450px; height: 130px;margin-top:10px;border: solid 1px;box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
+        <h2 style="margin-top: 30px;padding-right: 1180px;color: red;">Live Lecture :</h2>
+        <h4 id="sub" style="margin-right: 45%; margin-top: -4%;">Subject :NULL</h4>
+        <h4 id="tec" style="margin-right: 41%;margin-top: 2%">Teacher Name :NULL</h4>
+        <h4 id="croom" style=" margin-top: -7%;margin-left: 30%;">Classroom No.:NULL</h4>
+        <h4 id="lt" style=" margin-top: 2%;margin-left: 35%;">Lecture Time :NULL</h4>  
+        </div>
+    <div class="card" style="width: 1450px; height: 130px;margin-top:10px;border: solid 1px;box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
+        <h2 style="margin-top: 30px;padding-right: 1200px">Time Table:</h2>
+          <a class="btn btn-primary" style="width: 7%;height: 25%;margin-top: 0.3%;margin-left: 3%; border: none;border-radius: 10px;" href="timetable.html">view</a>  
+          <div class="card" style="margin-left: 230px;width: 130px; height: 125px;margin-top:-111px;border: solid 1px;box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
+            <h2 id="0">NULL</h2>  
+        </div>
+        <div class="card" style="margin-left: 360px;width: 130px; height: 125px;margin-top:-125px;border: solid 1px;box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
+          <h2 id="1">NULL</h2>  
+            </div>
+            <div class="card" style="margin-left: 490px;width: 130px; height: 125px;margin-top:-125px;border: solid 1px;box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
+              <h2>Break</h2>  
+          </div>
+          <div class="card" style="margin-left: 620px;width: 130px; height: 125px;margin-top:-125px;border: solid 1px;box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
+            <h2 id="2">NULL</h2>  
+        </div>
+        <div class="card" style="margin-left: 750px;width: 130px; height: 125px;margin-top:-125px;border: solid 1px;box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
+          <h2 id="3">NULL</h2>  
+        </div>
+        <div class="card" style="margin-left: 880px;width: 130px; height: 125px;margin-top:-125px;border: solid 1px;box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
+          <h2>Break</h2>  
+        </div>
+        <div class="card" style="margin-left: 1010px;width: 130px; height: 125px;margin-top:-125px;border: solid 1px;box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
+          <h2 id="4">NULL</h2>  
+        </div>
+        <div class="card" style="margin-left: 1140px;width: 130px; height: 125px;margin-top:-125px;border: solid 1px;box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
+          <h2 id="5">NULL</h2>  
+        </div>
+    </div>
+    <!-- <div class="card" style="width: 1450px; height: 180px;margin-top:10px;border: solid 1px;box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);"> -->
+        <h2 style="margin-top: 30px;padding-right: 1200px">Notification:</h2>
+        <table class="table  table-striped">
+          <thead>
+            <tr>
+              <th scope="col">SrNo</th>
+              <th scope="col">Headline</th>
+              <th scope="col">Publish_Date</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+          <tbody id="tbody1">
+          </tbody>
+        </table>
+    </center>
+  </body>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+      body{
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 140%;        
+      }
+    </style>
+    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script type="module">
+      function formatAMPM(date) {
+      var hours = date.getHours();
+      var minutes = date.getMinutes();
+      var ampm = hours >= 12 ? 'pm' : 'am';
+      hours = hours % 12;
+      hours = hours ? hours : 12; // the hour '0' should be '12'
+      minutes = minutes < 10 ? '0'+minutes : minutes;
+      var strTime = hours + ':' + minutes+ ampm;
+      return strTime;
+    }
+    const month = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+    const d = new Date();
+    setInterval(() => {
+      let str=formatAMPM(new Date)+','+' '+d.getDate()+' '+month[d.getMonth()]+' '+d.getFullYear();
+      let dates=document.getElementById('dates').innerText=str;
+    }, 1000);
+
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-app.js";
+      import {  getDatabase,ref,set,get,child, } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-database.js";
+      import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.19.1/firebase-auth.js";
+      const firebaseConfig = {
+    apiKey: "AIzaSyB3uFbJncSa-zf3LsjbEO6bmFl-WQxGKUA",
+    authDomain: "sit-college.firebaseapp.com",
+    databaseURL: "https://sit-college-default-rtdb.firebaseio.com",
+    projectId: "sit-college",
+    storageBucket: "sit-college.appspot.com",
+    messagingSenderId: "60562617136",
+    appId: "1:60562617136:web:e7ecb6c6ce9009c7bd0ef5",
+    measurementId: "G-5Q8599Z1KW"
+  };
+  const app=initializeApp(firebaseConfig);
+      const db = getDatabase(app);
+      const dbRef=ref(db); 
+      const weekday = ["SUNDAY","MONDAY","TUSEDAY","WEDNESDAY","THURSDAY","Friday","SATURDAY"];
+const ds = new Date();
+setInterval(() => {
+let day = weekday[ds.getDay()];
+var hours = ds.getHours();
+var minutes = ds.getMinutes();
+var ampm = hours >= 12 ? 'pm' : 'am';
+hours = hours % 12;
+hours = hours ? hours : 12;
+let kt=hours+":"+minutes+ampm;
+let st=hours // the hour '0' should be '12'
+if(ds.getDay()!=0){
+    let sub=document.getElementById('sub');
+    let tec=document.getElementById('tec');
+    let croom=document.getElementById('croom');
+    let lt=document.getElementById('lt');
+    let vu=0;
+    if((st==9 && minutes>=30 && ampm!="pm")||(st==10 && minutes<30&& ampm!="pm"))
+    {
+        vu=930;
+        localStorage.setItem("mk",vu);
+    }
+    else if((st==10 && minutes>=30 && ampm!="pm")||(st==11 && minutes<30&& ampm!="pm"))
+    {
+        vu=1030;
+        localStorage.setItem("mk",vu);
+    }
+    else if((st==11 && minutes>=30 && ampm!="pm")||(st==12 && minutes<10&& ampm!="am"))
+    {
+      vu=1130;
+        localStorage.setItem("mk",vu);
+    }
+    else if((st==12 && minutes>=10 && ampm!="am")||(st==1 && minutes<10&& ampm!="am"))
+    {
+        vu=1210;
+        localStorage.setItem("mk",vu);
+    }
+    else if((st==1 && minutes>=10 && ampm!="am")||(st==2 && minutes<10&& ampm!="am"))
+    {
+        vu=110;
+        localStorage.setItem("mk",vu);
+    }
+    else if((st==2 && minutes>=10 && ampm!="am" && minutes<20))
+    {
+        vu=210;
+        localStorage.setItem("mk",vu);
+    }
+    else if((st==2 && minutes>=20 && ampm!="am")||(st==3 && minutes<20&& ampm!="am"))
+    {
+        vu=220;
+        localStorage.setItem("mk",vu);
+    }
+    else if((st==3 && minutes>=20 && ampm!="am")||(st==4 && minutes<20&& ampm!="am"))
+    {
+        vu=320;
+        localStorage.setItem("mk",vu);
+    }
+    else if((st>=4 && minutes>=20 && ampm!="am")||(st==12 && ampm!="pm")||(st>=1&& st>=9 && ampm!="pm"))
+    {
+        vu=420;
+        localStorage.setItem("mk",vu);
+    }
+localStorage.setItem("day",day)
+// console.log(day);
+// console.log(ds.getDay());
+// console.log(localStorage.getItem("mk"))
+get(child(dbRef,`Timetable1/${localStorage.getItem("ms")}/${localStorage.getItem("day")}/${localStorage.getItem("mk")}`)).then((snapshot) => {
+if(snapshot.exists()) {
+    sub.innerText="Subject :"+snapshot.val().Subject;
+    tec.innerText="Teacher Name :"+snapshot.val().Teacher;
+    croom.innerText="Classroom No.:"+snapshot.val().Classroom;
+    lt.innerText="Lecture Time :"+snapshot.val().Time;
+   }
+   else if(localStorage.getItem("mk")==1130)
+   {
+    sub.innerText="Subject :"+"NULL";
+    tec.innerText="Teacher Name :"+"NULL";
+    croom.innerText="Classroom No.:"+"NULL"
+    lt.innerText="Lecture Time :"+"NULL";
+   }
+   else if(localStorage.getItem("mk")==210)
+   {
+    sub.innerText="Subject :"+"NULL";
+    tec.innerText="Teacher Name :"+"NULL";
+    croom.innerText="Classroom No.:"+"NULL"
+    lt.innerText="Lecture Time :"+"NULL";
+   }
+   else if(localStorage.getItem("mk")==420)
+   {
+    sub.innerText="Subject :"+"NULL";
+    tec.innerText="Teacher Name :"+"NULL";
+    croom.innerText="Classroom No.:"+"NULL"
+    lt.innerText="Lecture Time :"+"NULL";
+   }
+   
+  }).catch((error) => {
+console.log(error);
+});
+    }
+}, 1000); 
+      get(child(dbRef,`Educator/${localStorage.getItem("ms")}`)).then((snapshot) => {
+  if (snapshot.exists()) {
+    localStorage.setItem("first",snapshot.val().First_name);
+    localStorage.setItem("last",snapshot.val().Last_name);
+    localStorage.setItem("profile",snapshot.val().Profile_img);
+    localStorage.setItem("branch",snapshot.val().Branch);
+  }
+}).catch((error) => {
+  console.log(error);
+});
+if(ds.getDay()!=0){
+let day = weekday[ds.getDay()];
+let arr=[930,1030,1210,110,220,320];
+let pk=ref(db);
+for(let i=0;i<arr.length;i++)
+{
+  get(child(dbRef,`Timetable1/${localStorage.getItem("ms")}/${localStorage.getItem("day")}/${arr[i]}`)).then((snapshot) => {
+  if (snapshot.exists()) {
+        document.getElementById(`${i}`).innerText=snapshot.val().Subject;
+       }
+      }).catch((error) => {
+  console.log(error);
+});
+}
+}
+
+var srno=0;
+        var bankList=[];
+        var tbody=document.getElementById('tbody1');
+        let viewer=document.getElementById('viewer');
+        function AddAllItemToTable(Bank)
+        {
+            srno=0;
+            tbody.innerHTML=""
+            Bank.forEach(element => {
+                AddItemToTable(element.Headline,element.Publish_Date,element.Files);
+                checkpl(element.Headline,element.Publish_Date,element.Files);
+            });
+        }
+    
+        function GetAllDataOnce()
+        {
+            const dbRef=ref(db);
+            get(child(dbRef, `Notification/${localStorage.getItem("branch")}/${localStorage.getItem("year")}/`)).then((snapshot) => {
+       var bank=[];
+       snapshot.forEach(childSnapshot=>{
+        bank.push(childSnapshot.val());
+       });
+       AddAllItemToTable(bank);
+});
+        }
+        function Filltable(index){
+          if(index==null)
+             {
+              ai.value="";
+              ad.value="";
+             }
+             else{
+              --index;
+              ai.value=bankList[index][1];
+              ad.value=bankList[index][1];
+             }
+        };
+        // let mv=document.getElementById('mv');
+        // mv.addEventListener("click",()=>{
+        //   console.log("Hii Anuj Patil")
+        // });
+        function checkpl(Headline,Publish_Date,Files)
+        {
+          localStorage.setItem("cv1",Headline);
+          localStorage.setItem("cv2",Publish_Date);
+          localStorage.setItem("cv3",Files);
+        }
+        
+        function AddItemToTable(Headline,
+        Publish_Date,Files)
+        {
+            let trow=document.createElement('tr');
+            let td1=document.createElement('td');
+            let td2=document.createElement('td');
+            let td3=document.createElement('td');
+            let td4=document.createElement('td');
+            bankList.push([Headline,Publish_Date,Files])
+            td1.innerHTML=++srno;
+            td2.innerHTML=`<h5>${Headline}<span class="badge bg-secondary" style="margin-left:3%;font-size:10px;animation: example 1s infinite;">New</span></h5>`;
+            td4.innerHTML=Publish_Date;
+            td3.innerHTML=`<a href=${Files} target="_blank" download="Notice">Download</a>`;
+            trow.appendChild(td1);
+            trow.appendChild(td2);
+            trow.appendChild(td4);
+            trow.appendChild(td3);
+           // var control=document.createElement('div')
+            td1.addEventListener("click",()=>{
+              location.assign("http://127.0.0.1:5500/mnb.html")
+            })
+            // control.innerHTML=' <button id="mv" type="button" class="btn btn-primary my-2 ml-2" onclick="Anuj()"> View</button
+            tbody.appendChild(trow);
+           
+
+      
+        }
+        let ai= document.getElementById('ai')
+        let ad=   document.getElementById('ad')
+        let fn=   document.getElementById('fn')
+        let ed=  document.getElementById('ed')
+        let mb=  document.getElementById('mb')
+        let dob=  document.getElementById('dob')
+        let ka=  document.getElementById('ka')
+        let add=  document.getElementById('add')
+        let dt=  document.getElementById('dt')
+        let ta=  document.getElementById('ta')
+        let pin=  document.getElementById('pin')
+        let gr=  document.getElementById('gr')
+
+
+        let acc=  document.getElementById('acc')
+        let rej=  document.getElementById('rej')
+       
+        window.onload=GetAllDataOnce;
+
+  setInterval(() => {
+const op=localStorage.getItem("profile");
+   if(op){
+     document.querySelector('#avte').setAttribute("src",op);
+   }
+  let nm=document.getElementById('nm').innerText="Hello"+','+localStorage.getItem("first")+' '+localStorage.getItem("last");
+}, 1000);
+    </script>
+    <script>
+      let lg=document.getElementById('lg');
+      lg.addEventListener("click",()=>{
+        localStorage.clear();
+        window.location.replace('index.html');
+      }); 
+      </script>
+       <script>
+        let loader=document.getElementById('preloader');
+        window.addEventListener("load",()=>{
+          loader.style.display="none";
+        });
+      </script>
+  </body>
+</html>
